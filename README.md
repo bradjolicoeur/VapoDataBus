@@ -1,7 +1,7 @@
 ## VapoDataBus
 VapoDataBus was created to purge NServiceBus DataBus files after n days.  With some small modifications it can be used to purge other files as well. 
 
-We originaly used Sam Martindale's Powershell script for purging, but we found that we needed something that handled a larger volume of files.
+I originally used Sam Martindale's Powershell script for purging, but found that I needed something that handled a larger volume of files.
 
 This project improves on Sam's PS script in the following ways:
 - It can be run once an hour to delete an hour of files at a time
@@ -19,7 +19,7 @@ The configuration is all in the app settings.  For the most part you will only n
 - NumberOfDays =: The max number of days you want to keep files.
 
 Important note on NumberOfDays: 
-This is based on 24 hours so that it deletes files every hour.  If you set the number of days to 1 as an example, it will delete any folders over 24hours old.
+This is based on 24 hours so that it deletes files every hour.  If you set the number of days to 1 as an example, it will delete any folders over 24 hours old.
 
 ```sh
   <appSettings>
@@ -35,6 +35,8 @@ This is based on 24 hours so that it deletes files every hour.  If you set the n
 
 This project uses TopShelf and can be installed as a windows service by executing the following commandline after you pull the project down and compile it:
 
+```sh
  vapodatabus.exe install
+```
 
 If you want to customize the service name or etc, please lookup the Topshelf command line parameters
