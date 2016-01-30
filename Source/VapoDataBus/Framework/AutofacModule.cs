@@ -8,6 +8,7 @@ using VapoDataBus.Services;
 
 namespace VapoDataBus.Framework
 {
+
     public static class AutofacModule
     {
 
